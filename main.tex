@@ -1,0 +1,72 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[a4paper]{geometry}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{booktabs}
+
+\usepackage[
+    colorlinks=true,
+    allcolors=black,
+    urlcolor=blue,
+]{hyperref}
+
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+\renewcommand{\thesubsubsection}{}
+\renewcommand{\theparagraph}{}
+\setlength{\parindent}{0pt}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Упражнение}
+
+\usepackage{mhchem}
+\usepackage[lastexercise]{exercise}
+
+\begin{document}
+
+\subsection{Преобразование Фурье, пространство Шварца} % 08.09.23
+
+\begin{exercise} % p.7, ex. 1
+    Доказать, что для любого многочлена \({ P_{m}(x) }\), \({ x \in \mathbb R^{n} }\), функция \({ P_{m}(x) e^{-\lVert x \rVert^2} }\) лежит в пространстве Шварца \({ \mathcal S(\mathbb R^{n}) }\).
+\end{exercise}
+
+\begin{exercise}[Коммутационные соотношения]
+    Показать, что для любой функции \({ u \in \mathcal S(\mathbb R^{n}) }\) и мультииндекса \({ \alpha \in \mathbb Z_{+}^{n} }\) выполняются равенства
+    \[
+        \begin{gathered}
+            \mathcal F_{x \to \xi} \partial_{x}^{\alpha} u(x) = (i\xi)^{\alpha} \mathcal F_{x \to \xi} u(x)\,, \\
+            \mathcal F_{x \to \xi} \left[ x^{\alpha} u(x) \right] = \left[ i \frac{\partial}{\partial \xi} \right]^{\alpha} \mathcal F_{x \to \xi}u(x)\,.
+        \end{gathered}
+    \]
+\end{exercise}
+
+\begin{exercise} % p.7, ex. 4
+    Рассмотреть последовательность функций \({ \left\{ h_{p}(x) \right\} }\), \({ x \in \mathbb R^{1} }\), где \[
+        h_{p(x)} = \begin{cases}
+            p\,, & \lvert x \rvert < \frac{1}{2p}\,, \\
+            0\,, & \lvert x \rvert > \frac{1}{2p}\,.
+        \end{cases}
+    \]
+
+    Доказать, что последовательность \({ \left\{ h_{p}(x) \right\} }\) фундаментальна по норме пространства \({ H_{-1}(\mathbb R^{1}) }\) и что для всякой функции \({ \varphi(x) \in S(\mathbb R^{1}) }\) справедливо равенство \[
+        \lim_{p \to \infty} \int_{\mathbb R^{1}} h_{p}(x) \varphi(x)\: dx = \varphi(0)\,.
+    \]
+\end{exercise}
+
+\begin{exercise} % p.7, ex. 12
+    Вычислить преобразование Фурье для следующих функций:
+    \begin{enumerate}
+        \item \({ \displaystyle f(x) = \frac{1}{\pi} \cdot \frac{\varepsilon}{x^2 + \varepsilon^2} \quad (\varepsilon > 0) }\);
+        \item TODO
+    \end{enumerate}
+\end{exercise}
+
+\end{document}

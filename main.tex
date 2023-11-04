@@ -25,7 +25,7 @@
 \setlength{\parindent}{0pt}
 
 \theoremstyle{definition}
-\newtheorem{exercise}{Упражнение}
+\newtheorem{exercise}{}
 
 \usepackage{mhchem}
 \usepackage[lastexercise]{exercise}
@@ -56,7 +56,7 @@
         \end{cases}
     \]
 
-    Доказать, что последовательность \({ \left\{ h_{p}(x) \right\} }\) фундаментальна по норме пространства \({ H_{-1}(\mathbb R^{1}) }\) и что для всякой функции \({ \varphi(x) \in S(\mathbb R^{1}) }\) справедливо равенство \[
+    Доказать, что последовательность \({ \left\{ h_{p}(x) \right\} }\) фундаментальна по норме пространства \({ H^{-1}(\mathbb R^{1}) }\) и что для всякой функции \({ \varphi(x) \in S(\mathbb R^{1}) }\) справедливо равенство \[
         \lim_{p \to \infty} \int_{\mathbb R^{1}} h_{p}(x) \varphi(x)\: dx = \varphi(0)\,.
     \]
 \end{exercise}
@@ -67,6 +67,96 @@
         \item \({ \displaystyle f(x) = \frac{1}{\pi} \cdot \frac{\varepsilon}{x^2 + \varepsilon^2} \quad (\varepsilon > 0) }\);
         \item \({ \displaystyle f(x) = \sqrt{\frac{n}{4\pi}} e^{-n x^2 / 4} }\);
         \item \({ \displaystyle f(x) = \frac{1}{\pi} \frac{\sin nx}{x} }\).
+    \end{enumerate}
+\end{exercise}
+
+\subsection{Пространства Соболева} % 15.09.23
+
+\begin{exercise} % p. 9, ex. 13
+    Определить для какого максимального \({ k }\) функция \({ \varphi(x) }\) принадлежит пространуству \({ H^{k}(\mathbb R^{1}) }\), где \[
+        \varphi(x) = \begin{cases}
+            0\,, & x \leqslant 0 \land x \geqslant 2\,, \\
+            x\,, & 0 \leqslant x \leqslant 1\,, \\
+            2 - x\,, & 1 \leqslant x \leqslant 2\,.
+        \end{cases}
+    \] 
+\end{exercise}
+
+\begin{exercise} % p. 10, ex. 23
+    Дана функция \({ f(x) \in \mathcal S(\mathbb R^{1}) }\)  такая, что \({ \int_{\mathbb R^{1}} f(x)\: dx = 1 }\). Доказать, что последовательность \({ n \cdot f(nx) }\) при \({ n \to \infty }\) сходится в \({ H^{-1}(\mathbb R^{1}) }\) к \({ \delta(x) }\).
+\end{exercise}
+
+\begin{exercise} % p. 9, ex. 23
+    Найти преобразование Фурье функции \({ f(x) = \frac{1}{x^2 - k^2 - i\varepsilon} }\), \({ x \in \mathbb R^{3} }\), \({ k \in \mathbb R^{1} }\), \({ \varepsilon > 0 }\).
+\end{exercise}
+
+\begin{exercise} % p. 10, ex. 25
+    Обобщённая функция \({ \delta(\lvert x \rvert - a) }\), \({ x \in \mathbb R^{n} }\) из \({ H^{-[n/2]-1}(\mathbb R^{n}) }\) определяется с помощью функционала, задаваемого равенством \[
+        \int_{\mathbb R^{n}}  \delta(\lvert x \rvert - a) \varphi(x)\: dx = \int_{\lvert x \rvert = a} \varphi(\xi)\: d\sigma_{\xi}\,,
+    \] где \({ \varphi(x) \in H^{[n / 2]-1}(\mathbb R^{n}) }\), \({ d\sigma_{\xi} }\) - элемент поверхности сферы радиуса \({ a }\) в \({ \mathbb R^{n} }\) с центром в начале координат. Доказать ограниченность функционала задачи и найти преобразование Фурье функции \({ \delta(\lvert x \rvert - a) }\).
+\end{exercise}
+
+\begin{exercise} % p. 11, ex. 29
+    Найти производную функции \({ \theta(x) e^{-\alpha x} }\), \({ \alpha > 0 }\), где \[
+        \theta(x) = \begin{cases}
+            1\,, & x > 0\,, \\
+            0\,, & x < 0\,.
+        \end{cases}
+    \] 
+\end{exercise}
+
+\begin{exercise} % p. 12, ex. 34
+    Упростить выражения, вычислив входящие в них производные 
+    \footnote{При вычислении производных от функций \({ f(x) \in H^{k}(\mathbb R^{n}) }\) полезно использовать тожество \[
+        \frac{\partial}{\partial x_j} f(x) = \mathcal F^{^{-1}}_{\xi \to x} (i\xi_{j} \mathcal F_{x \to \xi}f(x))\,.
+    \]}:
+    \begin{enumerate}
+        \item \({ \displaystyle \frac{1}{4\pi} (- \Delta + 1) \frac{e^{-\lvert x \rvert}}{\lvert x \rvert} }\), \({ x \in \mathbb R^3 }\); \\
+        \item \({ \displaystyle \left( \frac{\partial}{\partial t} - a^2 \Delta \right) \frac{\theta(t) e^{-\frac{x^2}{4t}}}{2a \sqrt{\pi t}} }\), \({ x, t \in \mathbb R^{1} }\); \\
+        \item \({ \displaystyle (\Delta + k^2) \frac{e^{ik \lvert x \rvert}}{2ik} }\), \({ x \in \mathbb R^{1} }\);
+        \item \({ \displaystyle \Delta\left( \frac{1}{\lvert x \rvert} \right) }\), \({ x \in \mathbb R^3 }\).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Пусть \({ u \in C^{\infty}(\mathbb R^{n}) }\) и \({ u(x) \equiv 0 }\) при \({ \lvert x \rvert > \frac{\pi}{2} }\). 
+    Доказать, что норма \[
+        \lVert u \rVert'_{s} \overset{\text{def}}= \sqrt{\sum \lvert \hat{u}(k) \rvert^2 (1 + k^2)^{s}}
+    \] эквивалентна норме \({ \lVert u \rVert_{s} }\) пространства \({ H^{k}(\mathbb R^{n}) }\).
+\end{exercise}
+
+\subsection{Псевдодифференциальные операторы} % 29.09.23
+
+\begin{exercise}
+    Даны символы \({ a = f(x_1, x_2) \xi_1^2 + \xi_2^2 }\) и \({ b = \left( f(x_1, x_2) \xi_1^2 + \xi_2^2 \right)^{-1} }\). Вычислить \({ 3 }\) первых слагаемых\footnote{Имеются в виду первые слагаемые ряда, эквивалентого символу композиции операторов по теореме Кон-Ниренберга.} символа оператора \({ \operatorname{Op}(a) \operatorname{Op}(b) }\).
+\end{exercise}
+
+\begin{exercise}
+    Дан символ \({ b(x, \xi) = \xi_1^2 + x_1^3 \xi_2^2 }\). Найти первые \({ 2 }\) слагаемых символа \({ a }\) такого, что \({ \operatorname{Op}(a)^2 = \operatorname{Op}(b) }\).
+\end{exercise}
+
+\subsection{Понятие гладкого многообразия} % 13.10.23
+
+\begin{exercise}
+    Показать, что две стереографические проекции единичной сферы в \({ \mathbb R^{3} }\) на плоскость, проходящую через центр этой сферы, определяют на ней гладкий атлас.
+\end{exercise}
+
+\subsection{Теория Фредгольма} % 03.10.23
+
+\begin{exercise}
+    Пусть \({ H }\) - комплексное гильбертово пространство и \({ x, y \in H }\).
+    Обозначим через \({ (\widehat{x, y}) }\) угол между \({ x }\) и \({ y }\) относительно естественно индуцированного скалярного произведения в овеществлении пространства \({ H }\).
+    Верно ли, что \({ \cos (\widehat{x, y}) = \frac{\operatorname{Re}\, (x, y)}{\lvert x \rvert \cdot \lvert y \rvert} }\)?
+\end{exercise}
+
+\begin{exercise}
+    Пусть \({ \left\{ \lambda_j \right\}_{j=0}^{\infty} }\) - фиксированная последовательность комплексных чисел и оператор \({ A }\) в пространстве \({ \ell^2(\mathbb Z_{+}) }\) определяется формулой \[
+        A(x_0, x_1, \ldots, x_n, \ldots) = (\lambda_0 x_0, \lambda_1 x_1, \ldots, \lambda_n x_n, \ldots)\,.
+    \] Показать, что 
+    \begin{enumerate}
+        \item \({ \lVert A \rVert = \sup_{j} \lvert \lambda_j \rvert }\);
+        \item \({ A }\) --- оператор конечного ранга \({ \iff }\) последовательность \({ \left\{ \lambda_j \right\} }\) финитна;
+        \item если \({ \lambda_j \mapsto 0 }\) при \({ j \to \infty }\), то \({ A }\) - компактный оператор.
     \end{enumerate}
 \end{exercise}
 

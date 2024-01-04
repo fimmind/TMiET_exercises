@@ -25,10 +25,7 @@
 \setlength{\parindent}{0pt}
 
 \theoremstyle{definition}
-\newtheorem{exercise}{}
-
-\usepackage{mhchem}
-\usepackage[lastexercise]{exercise}
+\newtheorem{exercise}{Упр.}
 
 \begin{document}
 
@@ -79,7 +76,7 @@
             x\,, & 0 \leqslant x \leqslant 1\,, \\
             2 - x\,, & 1 \leqslant x \leqslant 2\,.
         \end{cases}
-    \] 
+    \]
 \end{exercise}
 
 \begin{exercise} % p. 10, ex. 23
@@ -102,11 +99,11 @@
             1\,, & x > 0\,, \\
             0\,, & x < 0\,.
         \end{cases}
-    \] 
+    \]
 \end{exercise}
 
 \begin{exercise} % p. 12, ex. 34
-    Упростить выражения, вычислив входящие в них производные 
+    Упростить выражения, вычислив входящие в них производные
     \footnote{При вычислении производных от функций \({ f(x) \in H^{k}(\mathbb R^{n}) }\) полезно использовать тожество \[
         \frac{\partial}{\partial x_j} f(x) = \mathcal F^{^{-1}}_{\xi \to x} (i\xi_{j} \mathcal F_{x \to \xi}f(x))\,.
     \]}:
@@ -119,7 +116,7 @@
 \end{exercise}
 
 \begin{exercise}
-    Пусть \({ u \in C^{\infty}(\mathbb R^{n}) }\) и \({ u(x) \equiv 0 }\) при \({ \lvert x \rvert > \frac{\pi}{2} }\). 
+    Пусть \({ u \in C^{\infty}(\mathbb R^{n}) }\) и \({ u(x) \equiv 0 }\) при \({ \lvert x \rvert > \frac{\pi}{2} }\).
     Доказать, что норма \[
         \lVert u \rVert'_{s} \overset{\text{def}}= \sqrt{\sum \lvert \hat{u}(k) \rvert^2 (1 + k^2)^{s}}
     \] эквивалентна норме \({ \lVert u \rVert_{s} }\) пространства \({ H^{k}(\mathbb R^{n}) }\).
@@ -152,7 +149,7 @@
 \begin{exercise}
     Пусть \({ \left\{ \lambda_j \right\}_{j=0}^{\infty} }\) - фиксированная последовательность комплексных чисел и оператор \({ A }\) в пространстве \({ \ell^2(\mathbb Z_{+}) }\) определяется формулой \[
         A(x_0, x_1, \ldots, x_n, \ldots) = (\lambda_0 x_0, \lambda_1 x_1, \ldots, \lambda_n x_n, \ldots)\,.
-    \] Показать, что 
+    \] Показать, что
     \begin{enumerate}
         \item \({ \lVert A \rVert = \sup_{j} \lvert \lambda_j \rvert }\);
         \item \({ A }\) --- оператор конечного ранга \({ \iff }\) последовательность \({ \left\{ \lambda_j \right\} }\) финитна;

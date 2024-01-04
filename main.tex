@@ -157,4 +157,63 @@
     \end{enumerate}
 \end{exercise}
 
+\subsection{Дифференциальные формы в \({ \mathbb R^{n} }\)}
+
+\begin{exercise}
+    Пусть \({ V }\) --- конечномерное векторное пространство. Показать, что для любых \({ a \in \Lambda^{k}(V) }\) и \({ b \in \Lambda^{l}(V) }\) выполняется \[
+        ab = ba \cdot (-1)^{kl}\,.
+    \]
+\end{exercise}
+
+\begin{exercise}
+    Пусть \({ \left\{ e_{j} \right\}_{j = 1}^{n} }\) - базис в линейном пространстве \({ V }\) и \({ a_i = \sum_j a_{ij} e_{j} }\) для \({ i \in \overline{1, n} }\). Показать, что \[
+        a_1 \cdots a_n = k \cdot e_{1} \cdots e_n\,,
+    \] где \({ k = \det (a_{ij}) }\).
+\end{exercise}
+
+\begin{exercise}
+    Пусть на сфере \({ \mathbb S^2 \subseteq \mathbb R^3 }\) вне северного и полярного полюсов выбраны стандартные полярные координаты \[
+        \begin{gathered}
+            x = \cos \varphi \sin \theta\,, \\
+            y = \sin \varphi \sin \theta\,, \\
+            z = \cos \theta\,.
+        \end{gathered}
+    \] Показать, что дифференциальная \({ 1 }\)-форма \({ \omega \coloneqq \sin \theta\: d\varphi\: d\theta }\), продолженная по непрерывности на полюса, гладка в каждой точке сферы.
+\end{exercise}
+
+\begin{exercise}
+    Найти числа Бетти и Эйлерову характеристику для следующих многообразий:
+    \begin{enumerate}
+        \item \({ [0, 1] }\),
+        \item \({ \mathbb S^1 }\),
+        \item \({ [0, 1] \times [0, 1] }\),
+        \item \({ \mathbb S^1 \times \mathbb S^1 }\).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Вычислить когомологии де Рама с компактным носителем для многообразия \({ M = \mathbb R }\).
+\end{exercise}
+
+\begin{exercise}
+    Показать, что
+    \begin{enumerate}
+        \item сфера ориентируема;
+        \item лист Мёбиуса не ориентируем.
+    \end{enumerate}
+\end{exercise}
+
+\subsection{Расслоения, связности}
+
+\begin{exercise}
+    Пусть \({ \nabla = d + a }\) --- связность. Вычислить \({ \nabla^2 }\) и найти его ранг.
+\end{exercise}
+
+\begin{exercise}
+    Пусть \({ S }\) и \({ N }\) - южный и северный полюса сферы \({ \mathbb S^2 }\) и \({ U_{+} \coloneqq \mathbb S^2 \setminus \left\{ S \right\} }\), \({ U_{-} \coloneqq \mathbb S^2 \setminus \left\{ N \right\} }\). Тогда для любого отображения \[
+        A : U_+ \cap U_- \to \operatorname{Gl}(k, \mathbb C)
+    \]
+    имеем векторное расслоение \({ E = U_+ \times \mathbb C^{k} \amalg U_- \times \mathbb C^{k} }\), в котором отождествляются элементы \({ (x, v) \in U_+ \times \mathbb C^{k} }\) и \({ (x, A(x)v) \in U_- \times \mathbb C^{k} }\). Найти отображение \({ A(x) }\) такое, что \({ E = T \mathbb S^2 }\).
+\end{exercise}
+
 \end{document}
